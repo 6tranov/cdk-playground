@@ -1,0 +1,8 @@
+services:
+    cdk_playground_service:
+        container_name: cdk_playground_container
+        build: .
+        tty: true
+        volumes:
+            - .:/app
+        command: sh -c "npm ci && /bin/bash"
